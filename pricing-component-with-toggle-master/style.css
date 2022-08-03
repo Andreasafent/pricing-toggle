@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+@media screen and (min-width:1000px){
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+    
+    .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: hsl(236, 72%, 79%);
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    input:checked + .slider {
+        background-color: hsl(236, 72%, 79%);
+    }
+    
+    input:focus + .slider {
+        box-shadow: 0 0 1px hsl(236, 72%, 79%);
+    }
+    
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+    
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+    .svg-top{
+        position:absolute;
+        top:0;
+        right:0;
+        z-index: -1;
+    }
+    .svg-bottom{
+        position:absolute;
+        bottom:0;
+        left:0;
+        z-index: -1;
+
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: hsl(240, 78%, 98%);
+        /* background-image:   url(images/bg-top.svg);
+        background-repeat: no-repeat;
+        background-position:right; */
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    
+    .title{
+        color: hsl(232, 13%, 33%);
+        margin-bottom:30px;
+    }
+    
+    .annually-container{
+        display: flex;
+        gap:20px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom:50px;    
+    }
+
+    .slider-text{
+        color:hsl(234, 14%, 74%);
+    }
+
+    .specs-container{
+        display: flex;
+        min-width:125vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .specs-item{
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        align-items: center;
+        justify-content: center;
+        width:30%;
+        height:45vh;
+        color:hsl(232, 13%, 33%);  
+        border-radius:10px;
+    }
+    .basic{
+        -webkit-box-shadow: -14px 0px 39px -12px rgba(0,0,0,0.36); 
+        box-shadow: -14px 0px 39px -12px rgba(0,0,0,0.36);
+    }
+    .master{
+        -webkit-box-shadow: 14px 0px 39px -12px rgba(0,0,0,0.36); 
+        box-shadow: 14px 0px 39px -12px rgba(0,0,0,0.36);
+    }
+
+    hr{
+        width:80%;
+        opacity:0.3;
+    }
+
+    .price-container{
+        display: flex;
+        align-items: center;
+    }
+
+    .price{
+        font-size: 4rem;
+        margin-top:10px;
+        margin-bottom:10px;    
+    }
+    .monthly{
+        display:none
+    }
+    .dollar{
+        font-size: 2rem;
+        margin-right:5px;
+    }
+
+    .perks{
+        font-size: 0.8rem;
+    }
+
+    .learn-more{
+        padding:10px 100px;
+        color:white;
+        text-transform: uppercase;
+        background:linear-gradient(50deg, hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+        border:solid 1px transparent;
+        border-radius:7px;
+        letter-spacing: 1px;
+        font-size: 0.7rem;
+        font-family: 'Montserrat', sans-serif;
+        margin-top:15px; 
+    }
+
+    .learn-more:hover{
+        cursor:pointer;
+        color:hsl(237, 63%, 64%);  
+        background: #fff;     
+        border:solid 1px hsl(232, 13%, 33%); 
+    }
+
+    .professional{
+        height:50vh;
+        background:linear-gradient( hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+        color:white;
+    }
+
+    .professional  .learn-more{
+        background:white;
+        color:hsl(237, 63%, 64%);
+    }
+
+    .professional  .learn-more:hover{
+        border:solid 1px white;
+        background:hsl(237, 63%, 64%);
+        color:white;
+    }
+    
+}
+
+
+@media screen and (max-width:1000px){
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+    
+    .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: hsl(236, 72%, 79%);
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    input:checked + .slider {
+        background-color: hsl(236, 72%, 79%);
+    }
+    
+    input:focus + .slider {
+        box-shadow: 0 0 1px hsl(236, 72%, 79%);
+    }
+    
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    
+    .svg-top{
+        position:absolute;
+        top:0;
+        right:0;
+        z-index: 99;
+    }
+    .svg-bottom{
+        position:absolute;
+        bottom:0;
+        left:0;
+        z-index: 99;
+
+    }
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+    
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+    .svg-top{
+        position:absolute;
+        top:0;
+        right:0;
+        z-index:-1;
+    }
+    .svg-bottom{
+        display:none;
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: hsl(240, 78%, 98%);
+        /* background-image:   url(images/bg-top.svg);
+        background-repeat: no-repeat;
+        background-position:right; */
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    
+    .title{
+        color: hsl(232, 13%, 33%);
+        margin-bottom:30px;
+    }
+    
+    .annually-container{
+        display: flex;
+        gap:20px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom:50px;    
+    }
+
+    .slider-text{
+        color:hsl(234, 14%, 74%);
+    }
+
+    .specs-container{
+        display: flex;
+        flex-direction: column;
+        min-width:125vh;
+        justify-content: center;
+        align-items: center;
+        gap:20px;
+    }
+
+    .specs-item{
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        align-items: center;
+        justify-content: center;
+        width:30%;
+        height:50vh;
+        color:hsl(232, 13%, 33%);  
+        border-radius:10px;
+        -webkit-box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.19); 
+        box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.19);
+    }
+
+    hr{
+        width:80%;
+        opacity:0.3;
+    }
+
+    .price-container{
+        display: flex;
+        align-items: center;
+    }
+
+    .price{
+        font-size: 4rem;
+        margin-top:10px;
+        margin-bottom:10px;    
+    }
+    .monthly{
+        display:none
+    }
+    .dollar{
+        font-size: 2rem;
+        margin-right:5px;
+    }
+
+    .perks{
+        font-size: 0.8rem;
+    }
+
+    .learn-more{
+        padding:10px 100px;
+        color:white;
+        text-transform: uppercase;
+        background:linear-gradient(50deg, hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+        border:solid 1px transparent;
+        border-radius:7px;
+        letter-spacing: 1px;
+        font-size: 0.7rem;
+        font-family: 'Montserrat', sans-serif;
+        margin-top:15px; 
+    }
+
+    .learn-more:hover{
+        cursor:pointer;
+        color:hsl(237, 63%, 64%);  
+        background: #fff;     
+        border:solid 1px hsl(232, 13%, 33%); 
+    }
+
+    .professional{
+        height:50vh;
+        background:linear-gradient( hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+        color:white;
+    }
+
+    .professional  .learn-more{
+        background:white;
+        color:hsl(237, 63%, 64%);
+    }
+
+    .professional  .learn-more:hover{
+        border:solid 1px white;
+        background:hsl(237, 63%, 64%);
+        color:white;
+    }
+    
+}
